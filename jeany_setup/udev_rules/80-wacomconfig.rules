@@ -1,0 +1,9 @@
+# Copyright (C) 2021 Jean Yves Beaucamp <jeanyvesb9@gmail.com>
+#------------------------------------------------------------------------
+# UDEV Rule for initial Wacom Intuos Setup
+#
+# Get the idVendor and idProduct from running:
+# lsusb
+#
+#------------------------------------------------------------------------
+SUBSYSTEM=="usb", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="033c", ACTION=="add|change", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="wacom_config.service"

@@ -1,0 +1,10 @@
+# Copyright (C) 2021 Jean Yves Beaucamp <jeanyvesb9@gmail.com>
+#------------------------------------------------------------------------
+# UDEV Rule for the wheel-scrolling-direction invertion
+#
+# Get the idVendor and idProduct from running:
+# lsusb
+#
+#------------------------------------------------------------------------
+
+SUBSYSTEM=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c08b", ACTION=="add|change", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="mouse_wheel_invert.service"

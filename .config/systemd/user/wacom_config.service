@@ -1,0 +1,11 @@
+[Unit]
+Description=Configuration script caller for Wacom Tablet
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/jeany_scripts/wacom/wacom_config.sh
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Configuration script caller for Mouse Wheel inverter
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/jeany_scripts/mouse_wheel_invert/mouse_wheel_invert.sh
+
+[Install]
+WantedBy=graphical-session.target
