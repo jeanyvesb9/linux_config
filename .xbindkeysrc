@@ -65,7 +65,7 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-". /usr/local/bin/jeany_scripts/wacom/wacom_monitor_switch.sh"
+". ~/bin/jeany_scripts/wacom/wacom_monitor_switch.sh"
     b:10
 
 ##################################
