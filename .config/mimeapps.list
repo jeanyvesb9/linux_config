@@ -8,3 +8,4 @@ application/pdf=okularApplication_pdf.desktop
 
 [Added Associations]
 application/pdf=google-chrome.desktop;okularApplication_pdf.desktop;
+text/x-bibtex=visual-studio-code.desktop;nvim.desktop;vim.desktop;

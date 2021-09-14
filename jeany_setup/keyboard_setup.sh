@@ -8,4 +8,4 @@
 #   -Variant: , (no-variant)
 #   -Options: compose:menu
 
-localectl set-x11-keymap us pc104 , compose:menu
+localectl set-x11-keymap us pc104 , "compose:ralt, compose:menu"

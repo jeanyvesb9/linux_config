@@ -5,6 +5,7 @@
 
 export TERM="xterm-256color"                      # getting proper colors
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export EDITOR="vim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -76,6 +77,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Git alias for linux_config
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# On first time, run:
+#   $ config config --local status.showUntrackedFiles no
 
 # vim
 alias vim='nvim'
@@ -196,8 +199,6 @@ up () {
   fi
 }
 
-
-
 ### ANACONDA ### -------------------------------------------------------------------
 
 # FOR CONDA: IMPORTANT!!
@@ -224,4 +225,6 @@ unset __conda_setup
 
 # CERN -----------------------------------------------------------------------------
 
+alias cks='kdestroy && kinit -kt ~/.keytab jbeaucam -l 7d -r 1d ; aklog CERN.CH'
 alias lxp='ssh -Y jbeaucam@lxplus.cern.ch'
+alias lxp8='ssh -Y jbeaucam@lxplus8.cern.ch'

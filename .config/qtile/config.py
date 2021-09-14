@@ -15,8 +15,6 @@ from plasma import Plasma
 mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"                             # My terminal of choice
 
-# def handle_mod_
-
 keys = [
          ### The essentials
          Key([mod], "Return",
@@ -161,7 +159,7 @@ keys = [
              lazy.layout.mode_horizontal(),
              desc='Toggle mode horizontal'
              ),
-         Key([mod], "d",
+         Key([mod], "f",
              lazy.layout.mode_vertical(),
              desc='Toggle mode vertical'
              ),
@@ -169,7 +167,7 @@ keys = [
              lazy.layout.mode_horizontal_split(),
              desc='Toggle mode horizontal split'
              ),
-         Key([mod, "shift"], "d",
+         Key([mod, "shift"], "f",
              lazy.layout.mode_vertical_split(),
              desc='Toggle mode vertical split'
              ),
@@ -211,7 +209,11 @@ keys = [
                  lazy.spawn("./dmscripts/dmlogout"),
                  desc='A logout menu'
                  ),
-         ])
+         ]),
+         Key([mod], "Escape",
+             lazy.spawn("kill -s USR1 $(pidof deadd-notification-center)"),
+             desc='Notification center'
+             ),
 ]
 
 group_names = [("I", {'layout': 'monadtall'}),
