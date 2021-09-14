@@ -1,0 +1,12 @@
+[Unit]
+Description=Corsair H115i Platinum AIO startup service
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl --match "Corsair H115i" initialize --pump-mode balanced
+ExecStart=liquidctl --match "Corsair H115i" set fan speed 26 41 27 47 29 55 31 69 33 83 36 92 38 100
+ExecStart=liquidctl --match "Corsair H115i" set led color super-fixed 2025FF 2025FF 2025FF 2025FF 0013FF 0013FF 0300FF 0300FF 0B00FF 0B00FF 1E00FF 1E00FF 0B00FF 0B00FF 0300FF 0300FF 82B2FF 82B2FF 82B2FF 82B2FF 82B2FF 82B2FF 82B2FF 82B2FF
+
+[Install]
+WantedBy=default.target
+
