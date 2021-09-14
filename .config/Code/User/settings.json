@@ -1,0 +1,22 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "jupyter.askForKernelRestart": false,
+    "terminal.external.linuxExec": "allacrity",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorTheme": "Solarized Dark",
+    "jupyter.alwaysTrustNotebooks": true,
+    "explorer.confirmDelete": false,
+    "C_Cpp.default.compilerPath": "/opt/anaconda3/envs/cern/bin/g++",
+    "C_Cpp.default.includePath": [
+        "/opt/anaconda3/envs/cern/include/**"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "git.ignoreLegacyWarning": true,
+}
